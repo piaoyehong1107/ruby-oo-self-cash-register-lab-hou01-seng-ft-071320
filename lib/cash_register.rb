@@ -1,11 +1,12 @@
-require 'pry'
 class CashRegister
-attr_accessor :total, :discount,:price,:quantity,:prices,:items
+attr_accessor :total, :discount,:price,:quantity,:items
    
   def initialize (discount=0,total=0)
     @total=total
     @discount=discount
     @list=[]
+    @price=price
+    @quantity=quantity
   end
   
     
@@ -29,7 +30,7 @@ end
   end
   
   def void_last_transaction
-    
+    @total= @total-@price
   end
   
 end
