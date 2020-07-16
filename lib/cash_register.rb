@@ -35,7 +35,10 @@ end
   end
  
   def void_last_transaction
+    if @total.length!=0
     @total= @total-@prices.pop
+    else
+    return 0.0
   end
   
 end
